@@ -1,0 +1,9 @@
+/* Estilo en CSS para el body */
+body {
+  max-width: 800px; /* Limita el ancho a 960px, ajústalo según necesites */
+  background-color: aliceblue;
+  margin-left: 950px;
+  margin-top: 100px;
+  display: block;
+  max-width: 300px;
+}
