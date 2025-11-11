@@ -2,8 +2,21 @@
 body {
   max-width: 800px; /* Limita el ancho a 960px, ajústalo según necesites */
   background-color: aliceblue;
-  margin-left: 950px;
-  margin-top: 100px;
+  margin-left: 10px;
   display: block;
-  max-width: 300px;
 }
+
+
+
+.form-group input.valido{
+  border-color: green;
+}
+.form-group input.invalido{
+  border-color: red;
+}
+.form-group input.invalid + p{
+  opacity: 1;
+  height: auto;
+  margin-bottom: 20px;
+}
+
