@@ -2,26 +2,29 @@ class ValidacionCampos {
 
     constructor(){
         //Declaro el objeto de patrones REGEX
-        const patterns = {
-            dni: /^[x]*\d{8}[a-z]$/i     
+        this.patterns = {
+            nombre: /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+$/   
           };
 
-        const inputs = document.querySelectorAll('input');
+         this.inputs = document.querySelectorAll('input');
           
     }
 
-
+    //---------EVENTOS-------
     // ------------NOMBRE---------
     //Que empiece por mayúscula  
 
       iniciar(){
 
-        inputs.forEach((input) => {
+        this.inputs.forEach((input) => {
             input.addEventListener('keyup', (e) => {
-                if(e.target.name == "dni"){
-                    validarMayus(e.target, regex)
+
+                const name = e.target.name; //nombre del campo que guardo en la variable name para mayor comodidad
+                const regex = this.patterns[name];
+
+                if(regex){
+                    this.validarMayus(e.target, regex);
                 }
-                validarMayus(e.target, patterns[e.target.attributes.name.value]);
             });
         });
     
@@ -32,11 +35,14 @@ class ValidacionCampos {
      validarMayus(campo, regex){
         //test() comprueba que el valor recibido (e.target) cumple la expresión regular recibida (patterns[e.target.attributes.name.value]) 
         if(regex.test(campo.value)){
-            campo.className = 'valido';
+            campo.classList.remove("invalido");
+            campo.classList.add("valido");
         }else {
-            campo.className = 'invalido';
+            campo.classList.remove("valido");
+            campo.classList.add("invalido");
         }
     }
+
     // ------------APELLIDO---------
     // ------------DNI/NIE---------
     // -----------FECHA_NAC---------
@@ -52,4 +58,11 @@ class ValidacionCampos {
 
     // ------------SESSION_STORAGE---------
 
+
+
 }
+
+
+//---------CREACIÓN DEL OBJETO------
+const validar = new ValidacionCampos();
+validar.iniciar();

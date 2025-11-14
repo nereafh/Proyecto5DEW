@@ -1,22 +1,57 @@
-/* Estilo en CSS para el body */
+/* ---------- BODY ---------- */
 body {
-  max-width: 800px; /* Limita el ancho a 960px, ajústalo según necesites */
-  background-color: aliceblue;
-  margin-left: 10px;
-  display: block;
+    max-width: 800px;       /* Limita el ancho del formulario */
+    margin: 20px auto;      /* Centrado horizontal con margen superior */
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-
-
-.form-group input.valido{
-  border-color: green;
-}
-.form-group input.invalido{
-  border-color: red;
-}
-.form-group input.invalid + p{
-  opacity: 1;
-  height: auto;
-  margin-bottom: 20px;
+/* ---------- FORM-GROUP ---------- */
+.form-group {
+    margin-bottom: 20px;
 }
 
+/* ---------- INPUTS ---------- */
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ccc;   /* borde inicial */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Borde verde si es válido */
+.form-group input.valido {
+    border-color: green !important;
+}
+
+/* Borde rojo si es inválido */
+.form-group input.invalido {
+    border-color: red !important;
+}
+
+/* ---------- MENSAJE DE ERROR ---------- */
+.form-group p {
+    font-size: 13px;
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 0;
+    height: 0;           /* Oculto por defecto */
+    opacity: 0;          /* Oculto por defecto */
+    transition: all 0.3s ease;
+}
+
+/* Mostrar mensaje si el input es inválido */
+.form-group input.invalido + p {
+    height: auto;
+    opacity: 1;
+    margin-bottom: 5px;
+}
+
+/* ---------- BOTONES ---------- */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
