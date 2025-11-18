@@ -17,7 +17,64 @@
             <input type="text" class="form-control" id="Nombre" name="nombre">
             <p>El nombre debe comenzar por mayúscula</p>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+          <div class="form-group">
+            <label for="Apellidos">Apellidos: </label>
+            <input type="text" class="form-control" id="Apellidos" name="apellidos">
+            <p>El apellido debe comenzar por mayúscula</p>
+        </div>
+        <div class="form-group">
+            <label for="DNI_NIE">DNI/NIE:</label>
+            <input type="text" class="form-control" id="DNI_NIE" name="dni">
+            <p>Debe ser un DNI válido</p>
+        </div>
+        <div class="form-group">
+            <label for="Fec_nac">Fecha Nacimiento: </label>
+            <input type="text" class="form-control" id="Fec_nac" name="fecha_nac">
+            <p>Debe ser una fecha válida, asegúrese de usar separadores "-", "/"</p>
+        </div>
+        <div class="form-group">
+              <label for="CP">Código Postal: </label>
+              <input type="number" class="form-control" id="CP" name="cp">
+              <p>Debe ser un código postal válido formado por 5 números</p>
+          </div>
+          <div class="form-group">
+              <label for="Email1">Email: </label>
+              <input type="email" class="form-control" id="Email1" name="email">
+              <p>Debe ser un email válido, entre 5 y 12 caracteres</p>
+          </div>
+          <div class="form-group">
+                <label for="TlfFijo">Tlf fijo: </label>
+                <input type="number" class="form-control" id="TlfFijo" name="tlf_fijo">
+                <p>Introduce un número válido de 9 dígitos comenzando por el número 8 o 9</p>
+
+          </div>
+          <div class="form-group">
+                <label for="TlfMovil">Tlf móvil: </label>
+                <input type="number" class="form-control" id="TlfMovil" name="tlf_movil">
+                <p>Introduce un número válido de 9 dígitos comenzando por el número 6 o 7</p>
+          </div>
+          <div class="form-group">
+                <label for="IBAN">IBAN: </label>
+                <input type="text" class="form-control" id="IBAN" name="iban">
+        </div>
+        <div class="form-group">
+                <label for="TarjetaCredito">Tarjeta de crédito: </label>
+                <input type="number" class="form-control" id="TarjetaCredito" name="tarjeta_credito">
+                <p>Introduce una tarjeta de crédito válida (16 dígitos)</p>
+        </div>
+        <div class="form-group">
+                <label for="Password1">Contraseña: </label>
+                <input type="password" class="form-control" id="Password1" placeholder="Password" name="password">
+                <p>Introduce mínimo 12, máximo 18 caracteres con mayúscula, minúscula, número y carácter especial</p>
+        </div>
+        <div class="form-group">
+                <label for="RepitPassword1">Repetir contraseña: </label>
+                <input type="password" class="form-control" id="RepitPassword1" placeholder="Password" name="repit_password">
+                <p>Debe coincidir con la contraseña anterior.</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+        <button type="button" class="btn btn-secondary" id="btnRecuperar">Recuperar</button>
+
     </form>
 
 <script src="validacionCampos.js"></script>
@@ -25,58 +82,3 @@
 </html>
 
 
-
-<!----
-
-<div class="form-group">
-  <label for="Apellidos">Apellidos: </label>
-  <input type="text" class="form-control" id="Apellidos" name="apellidos">
-</div>
-<div class="form-group">
-  <label for="DNI_NIE">DNI/NIE:</label>
-  <input type="text" class="form-control" id="DNI_NIE" name="dni">
-  <p>Debe ser un DNI válido</p>
-</div>
-<div class="form-group">
-  <label for="Fec_nac">Fecha Nacimiento: </label>
-  <input type="date" class="form-control" id="Fec_nac" name="fecha_nac">
-</div>
-<div class="form-group">
-  <label for="CP">Código Postal: </label>
-  <input type="number" class="form-control" id="CP" name="cp">
-</div>
-<div class="form-group">
-<label for="Email1">Email: </label>
-<input type="email" class="form-control" id="Email1" name="email">
-</div>
-<div class="form-group">
-  <label for="TlfFijo">Tlf fijo: </label>
-  <input type="number" class="form-control" id="TlfFijo" name="tlf_fijo">
-</div>
-<div class="form-group">
-  <label for="TlfMovil">Tlf móvil: </label>
-  <input type="number" class="form-control" id="TlfMovil" name="tlf_movil">
-</div>
-<div class="form-group">
-  <label for="IBAN">IBAN: </label>
-  <input type="text" class="form-control" id="IBAN" name="iban">
-</div>
-<div class="form-group">
-  <label for="TarjetaCredito">Tarjeta de crédito: </label>
-  <input type="number" class="form-control" id="TarjetaCredito" name="tarjeta_credito">
-</div>
-<div class="form-group">
-<label for="Password1">Contraseña: </label>
-<input type="password" class="form-control" id="Password1" placeholder="Password" name="password">
-</div>
-<div class="form-group">
-  <label for="RepitPassword1">Repetir contraseña: </label>
-  <input type="password" class="form-control" id="RepitPassword1" placeholder="Password" name="repit_password">
-</div>
-<button type="submit" class="btn btn-primary">Enviar</button>
-</form>
-
-<script src="validacionCampos.js"></script>
-
-
--->
